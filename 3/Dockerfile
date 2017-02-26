@@ -10,7 +10,16 @@ RUN apt-get update \
     && apt-get install -y python-pillow python-imaging python3-dev
 
 RUN pip install --upgrade pip \
-  && pip install pymongo nose boto pika pillow \
+  && pip install \
+    pymongo \
+    nose \
+    boto \
+    pika \
+    pillow \
+    requests \
+    oauth2client \
+    PyOpenSSL \
+    gspread \
   && mkdir -p /var/www
 
 WORKDIR /var/www
