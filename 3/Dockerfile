@@ -20,7 +20,7 @@ RUN pip install --upgrade pip \
     oauth2client \
     PyOpenSSL \
     gspread \
-    python-dateutil
+    python-dateutil \
   && mkdir -p /var/www
 
 WORKDIR /var/www
