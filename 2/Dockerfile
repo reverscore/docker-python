@@ -21,6 +21,7 @@ RUN pip install --upgrade pip \
     PyOpenSSL \
     gspread \
     python-dateutil \
+    python-intercom \
   && mkdir -p /var/www
 
 WORKDIR /var/www

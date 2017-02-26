@@ -15,6 +15,7 @@ RUN pip install --upgrade pip \
     gspread \
     python-dateutil \
     cryptography \
+    python-intercom \
   && mkdir -p /var/www
 
 WORKDIR /var/www
