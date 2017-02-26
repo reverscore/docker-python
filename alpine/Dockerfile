@@ -1,5 +1,7 @@
 FROM python:3-alpine
 
+RUN apk --update add build-base libffi-dev openssl-dev python-dev py-pip
+
 RUN pip install --upgrade pip \
   && pip install \
     pymongo \
@@ -12,6 +14,7 @@ RUN pip install --upgrade pip \
     PyOpenSSL \
     gspread \
     python-dateutil \
+    cryptography \
   && mkdir -p /var/www
 
 WORKDIR /var/www
