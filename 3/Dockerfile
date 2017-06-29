@@ -13,7 +13,7 @@ RUN pip install --upgrade pip \
   && pip install \
     pymongo \
     nose \
-    boto \
+    boto3 \
     pika \
     pillow \
     requests \

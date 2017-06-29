@@ -1,14 +1,21 @@
 FROM python:3-alpine
 
-RUN apk --update add build-base libffi-dev openssl-dev python-dev py-pip
+RUN apk --update add \
+  build-base \
+  libffi-dev \
+  openssl-dev \
+  python-dev \
+  py-pip \
+  py-pillow \
+  libjpeg \
+  zlib
 
 RUN pip install --upgrade pip \
   && pip install \
     pymongo \
     nose \
-    boto \
+    boto3 \
     pika \
-    pillow \
     requests \
     oauth2client \
     PyOpenSSL \
