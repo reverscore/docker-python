@@ -23,6 +23,7 @@ RUN pip install --upgrade pip \
     python-dateutil \
     cryptography \
     python-intercom \
+    cloudinary \
   && mkdir -p /var/www
 
 WORKDIR /var/www

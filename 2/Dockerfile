@@ -22,6 +22,7 @@ RUN pip install --upgrade pip \
     gspread \
     python-dateutil \
     python-intercom \
+    cloudinary \
   && mkdir -p /var/www
 
 WORKDIR /var/www
