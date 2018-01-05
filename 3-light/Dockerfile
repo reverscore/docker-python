@@ -10,7 +10,7 @@ RUN apt-get update \
     && apt-get install -y python3-dev
 
 RUN pip install --upgrade pip \
-  && pip install \
+  && pip install -U \
     pytest \
     python-dateutil \
   && mkdir -p /var/www
