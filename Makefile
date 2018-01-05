@@ -12,3 +12,6 @@ build-2:
 
 build-alpine:
 	docker build --tag=rever/python:alpine alpine
+
+build-alpine-dev:
+	docker build --tag=rever/python:alpine-dev alpine-dev
