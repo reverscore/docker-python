@@ -19,6 +19,7 @@ RUN pip install --upgrade pip \
     python-dateutil \
     python-intercom \
     cloudinary \
+    nose2 \
   && mkdir -p /var/www
 
 WORKDIR /var/www
