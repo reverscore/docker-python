@@ -7,6 +7,7 @@ RUN apk --update add \
   python-dev \
   py-pip \
   nodejs \
+  npm \
   zlib
 
 RUN pip install --upgrade pip \
