@@ -14,4 +14,6 @@ RUN pip install --upgrade pip \
     python-dateutil \
   && mkdir -p /var/www
 
+RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
+
 WORKDIR /var/www
