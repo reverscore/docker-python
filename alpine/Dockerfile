@@ -14,6 +14,12 @@ RUN pip install --upgrade pip \
     python-dateutil \
   && mkdir -p /var/www
 
-RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
+RUN apk add --no-cache --virtual .build-deps \
+    gcc \
+    python3-dev \
+    musl-dev \
+    postgresql-dev \
+    && pip install --no-cache-dir psycopg2 \
+    && apk del --no-cache .build-deps
 
 WORKDIR /var/www
