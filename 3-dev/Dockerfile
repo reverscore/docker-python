@@ -1,7 +1,7 @@
 FROM python:3
 
 RUN apt-get update \
-  && apt-get install -y python-pillow python-pil python3-dev
+  && apt-get install -y python-pillow python-pil python3-dev build-essential libssl-dev libffi-dev
 
 RUN pip install --upgrade pip \
   && pip install \
