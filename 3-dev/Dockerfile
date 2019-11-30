@@ -23,6 +23,6 @@ RUN pip install --upgrade pip \
   && mkdir -p /var/www
 
 RUN apt-get install npm \
-  npm install -g nodemon
+  && npm install -g nodemon
 
 WORKDIR /var/www
