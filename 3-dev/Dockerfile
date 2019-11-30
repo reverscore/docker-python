@@ -22,7 +22,7 @@ RUN pip install --upgrade pip \
   nose2 \
   && mkdir -p /var/www
 
-RUN apt-get install npm \
+RUN apt-get install -y npm \
   && npm install -g nodemon
 
 WORKDIR /var/www
