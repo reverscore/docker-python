@@ -1,7 +1,7 @@
 FROM python:3
 
 RUN apt-get update \
-  && apt-get install -y python-pillow python-pil python3-dev libevent-dev python-lxml
+  && apt-get install -y python3-dev libevent-dev python-lxml
 
 RUN pip install --upgrade pip \
   && pip install \
