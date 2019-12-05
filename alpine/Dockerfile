@@ -19,8 +19,6 @@ RUN apk add --no-cache --virtual .build-deps \
     python3-dev \
     musl-dev \
     postgresql-dev \
-    && pip install --no-cache-dir psycopg2 \
-    && pip install --no-cache-dir psycopg2-binary \
-    && apk del --no-cache .build-deps
+    make
 
 WORKDIR /var/www
