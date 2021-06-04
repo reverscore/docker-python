@@ -13,6 +13,10 @@ RUN apk --update add \
 RUN pip install --upgrade pip \
   && pip install -U \
   pytest \
+  pika \
+  requests \
+  oauth2client \
+  nose2 \
   python-dateutil \
   && npm install -g nodemon \
   && mkdir -p /var/www
