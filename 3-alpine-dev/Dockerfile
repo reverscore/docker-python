@@ -1,11 +1,13 @@
 FROM python:3.9.5-alpine3.13
 
-RUN apk --update add \
+RUN apk add --no-cache --virtual .build-deps  \
   build-base \
+  gcc \
+  musl-dev \
   libffi-dev \
   openssl-dev \
-  python-dev \
   py-pip \
+  postgresql-dev \
   nodejs \
   npm \
   zlib
@@ -21,12 +23,7 @@ RUN pip install --upgrade pip \
   && npm install -g nodemon \
   && mkdir -p /var/www
 
-RUN apk add --no-cache --virtual .build-deps \
-  gcc \
-  python3-dev \
-  musl-dev \
-  postgresql-dev \
-  && pip install --no-cache-dir psycopg2 \
+RUN pip install --no-cache-dir psycopg2 \
   && pip install --no-cache-dir psycopg2-binary \
   && apk del --no-cache .build-deps
 
