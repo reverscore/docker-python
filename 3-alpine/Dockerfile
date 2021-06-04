@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM python:3.9.5-alpine3.13
 
 RUN apk --update add \
   build-base \
@@ -10,15 +10,15 @@ RUN apk --update add \
 
 RUN pip install --upgrade pip \
   && pip install -U \
-    pytest \
-    python-dateutil \
+  pytest \
+  python-dateutil \
   && mkdir -p /var/www
 
 RUN apk add --no-cache --virtual .build-deps \
-    gcc \
-    python3-dev \
-    musl-dev \
-    postgresql-dev \
-    make
+  gcc \
+  python3-dev \
+  musl-dev \
+  postgresql-dev \
+  make
 
 WORKDIR /var/www
