@@ -4,17 +4,19 @@ RUN apk add --no-cache --virtual .build-deps gcc libc-dev libxslt-dev \
   && apk add --no-cache libxslt build-base \
   gcc \
   g++ \
+  git \
+  libffi-dev \
+  libjpeg-turbo-dev \
   libxslt-dev \
   musl-dev \
-  python3-dev \
-  libffi-dev \
+  nodejs \
+  npm \
   openssl-dev \
   py-pip \
   postgresql-dev \
-  nodejs \
-  npm \
-  git \
+  python3-dev \
   zlib \
+  zlib-dev \
   && pip install --upgrade pip \
   && pip install -U \
   pytest \
