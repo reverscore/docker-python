@@ -8,6 +8,7 @@ RUN apk add --no-cache --virtual .build-deps gcc libc-dev libxslt-dev \
   libffi-dev \
   libjpeg-turbo-dev \
   libxslt-dev \
+  make \
   musl-dev \
   nodejs \
   npm \
