@@ -2,7 +2,7 @@ FROM python:3.8.8-slim-buster
 
 RUN apt-get update \
   && apt install -y curl python3-dev libevent-dev libblas-dev \
-  liblapack-dev libatlas-base-dev gfortran \
+  liblapack-dev libatlas-base-dev gfortran git \
   && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
   && apt-get update \
   && apt install -y nodejs \
