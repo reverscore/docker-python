@@ -1,4 +1,4 @@
-FROM python:3.8.8-slim-buster
+FROM python:3.8.8-buster
 
 RUN apt-get update \
   && apt install -y curl python3-dev libevent-dev libblas-dev jq less zlib curl \
