@@ -1,7 +1,7 @@
 FROM python:3.8.8-slim-buster
 
 RUN apt-get update \
-  && apt install -y curl python3-dev libevent-dev libblas-dev \
+  && apt install -y curl python3-dev libevent-dev libblas-dev jq less zlib curl \
   liblapack-dev libatlas-base-dev gfortran git \
   && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
   && apt-get update \
