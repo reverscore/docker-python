@@ -1,4 +1,4 @@
-FROM python:3.8.8-buster
+FROM python:3.11-bullseye
 
 RUN apt-get update \
   && apt install -y curl python3-dev libevent-dev libblas-dev jq less zlib curl \
