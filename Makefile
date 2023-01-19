@@ -1,17 +1,5 @@
-build:
-	docker build --tag=rever/python:latest 3
+build-3-debian:
+	docker build --tag=rever/python:latest 3-debian
 
-build-3:
-	docker build --tag=rever/python:latest 3
-
-build-3-light:
-	docker build --tag=rever/python:3-light 3-light
-
-build-2:
-	docker build --tag=rever/python:2 2
-
-build-alpine:
-	docker build --tag=rever/python:alpine alpine
-
-build-alpine-dev:
-	docker build --tag=rever/python:alpine-dev alpine-dev
+build-3-awscli:
+	docker build --tag=rever/python:3-awscli 3-awscli
