@@ -2,7 +2,7 @@ FROM python:3.11-bullseye
 
 RUN apt-get update \
   && apt install -y curl python3-dev libevent-dev libblas-dev jq less zlib1g curl \
-  liblapack-dev libatlas-base-dev gfortran git \
+  liblapack-dev libatlas-base-dev gfortran git linux-headers-$(uname -r) gcc musl-dev \
   && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
   && apt-get update \
   && apt install -y nodejs \
