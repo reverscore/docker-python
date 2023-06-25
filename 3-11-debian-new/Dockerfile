@@ -5,7 +5,7 @@ RUN apt-get update \
   liblapack-dev libatlas-base-dev gfortran git gcc musl-dev \
   && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
   && apt-get update \
-  && apt install -y nodejs \
+  && apt install -y nodejs npm \
   && pip install --upgrade pip setuptools wheel \
   && pip install \
   pika \
