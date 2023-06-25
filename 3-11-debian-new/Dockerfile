@@ -1,4 +1,4 @@
-FROM python:3.11-bullseye
+FROM python:3.11-bookworm
 
 RUN apt-get update \
   && apt install -y curl python3-dev libevent-dev libblas-dev jq less zlib1g curl \
@@ -13,6 +13,13 @@ RUN apt-get update \
   oauth2client \
   python-dateutil \
   nose2 \
+  lxml \
+  certifi \
+  numpy \
+  pandas \
+  pytest \
+  python-dateutil \
+  python-json-logger \
   && npm install -g nodemon \
   && mkdir -p /var/www
 
