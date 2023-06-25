@@ -13,12 +13,6 @@ RUN apt-get update \
   oauth2client \
   python-dateutil \
   nose2 \
-  lxml \
-  certifi \
-  numpy \
-  pandas \
-  pytest \
-  python-dateutil \
   python-json-logger \
   && npm install -g nodemon \
   && mkdir -p /var/www
