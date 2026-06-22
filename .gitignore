@@ -1,0 +1,4 @@
+*.pyc
+environments.json
+.qodo
+.DS_Store
