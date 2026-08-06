@@ -1,4 +1,4 @@
-FROM python:3.11
+FROM python:3.11.15-trixie
 
 RUN apt-get update \
   && apt install -y curl python3-dev libevent-dev libblas-dev jq less zlib1g curl \
