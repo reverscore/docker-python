@@ -2,7 +2,7 @@ FROM python:3.11.15-trixie
 
 RUN apt-get update \
   && apt install -y curl python3-dev libevent-dev libblas-dev jq less zlib1g curl \
-  liblapack-dev libatlas-base-dev gfortran git gcc musl-dev \
+  liblapack-dev gfortran git gcc musl-dev \
   && pip install --upgrade pip setuptools wheel
   
 RUN apt-get install -y ca-certificates curl gnupg \
