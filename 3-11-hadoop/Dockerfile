@@ -13,7 +13,8 @@ RUN alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
 # Download the Postgres JDBC driver into the Spark library folder
 RUN curl -o /usr/lib/spark/jars/postgresql-42.7.3.jar https://jdbc.postgresql.org/download/postgresql-42.7.3.jar
 
-# Download NLTK data
+# Install NLTK, then download its data
+RUN python3.11 -m pip install nltk
 RUN python3.11 -m nltk.downloader -d /usr/share/nltk_data punkt stopwords wordnet punkt_tab
 RUN chmod -R 755 /usr/share/nltk_data
 
